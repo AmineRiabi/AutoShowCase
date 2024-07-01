@@ -1,0 +1,532 @@
+header{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header.audi-R8{
+    background-image: url("/imgs/audi-R8/audi-r8-header.webp");
+}
+header .header-content{
+    display: flex;
+    height: 600px;
+}
+header .header-content > .left-section,
+header .header-content > .right-section{
+    width: 50%;
+    height: 100%;
+    padding: 25px;
+}
+header .header-content > .right-section{
+    display: flex;
+    justify-content: flex-end;
+}
+header .header-content > .left-section{
+   display: flex;
+   align-items: flex-end;
+}
+header .header-content > .left-section h1{
+    text-transform: capitalize;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 3.4rem;
+    padding: 10px 0;
+}
+header .header-content > .left-section p{
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+main > .description{
+    background-color: #00050b;
+    padding: 50px 0;
+}
+main > .description .top-section{
+    padding: 10px;
+    color: #ffffff;
+    position: relative;
+}
+main > .description .top-section::before{
+    content: "";
+    width: 10px;
+    height: 85%;
+    background-color: #ff3131;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+}
+main > .description .top-section > h1{
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 2.25rem;
+    padding: 10px 0;
+}
+main > .description .top-section > p{
+    width: 70%;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    font-size: 1.063rem;
+}
+main > .description .bottom-section{
+    display: flex;
+}
+main > .description .bottom-section > .left-box,
+main > .description .bottom-section > .mid-box,
+main > .description .bottom-section > .right-box{
+    width: calc(100% / 3);
+    display: flex;
+    column-gap: 10px;
+}
+main > .description .bottom-section > .left-box > .icon{
+    text-transform: capitalize;
+    color: #ff3131;
+    font-size: 6rem;
+    font-family:'Times New Roman', Times, serif;
+}
+main > .description .bottom-section  .description{
+    color: #ffffff;
+    padding-top: 30px;
+}
+main > .description .bottom-section  .description > h2{
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 2;
+    letter-spacing: 0.5px;
+}
+main > .description .bottom-section  .description > p{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+}
+main > .description .bottom-section > .mid-box > .icon,
+main > .description .bottom-section > .right-box > .icon{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-width: 70px;
+}
+main > .description .bottom-section > .mid-box > .icon{
+    background-image: url("/imgs/001-electric-car.png");
+}
+main > .description .bottom-section > .right-box > .icon {
+    background-image: url("/imgs/003-car-light.png");
+}
+main > .car-design{
+    display:flex;
+}
+main > .car-design > .left-section,
+main > .car-design > .right-section{
+    width: calc(100% / 2);
+}
+main > .car-design > .left-section > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+main > .car-design > .right-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+main > .car-design > .right-section > div:first-child > img,
+main > .car-design > .right-section > div:nth-child(2) > img,
+main > .car-design > .right-section > div:last-child > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main > .car-design > .right-section > div:nth-child(3){
+    background-color: #ff3131;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+main > .speed{
+    padding: 30px 0;
+    background-color: #00050b;
+}
+main > .speed  .content{
+    display: flex;
+}
+main > .speed  .content > div{
+    width: calc(100% / 3);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    row-gap: 20px;
+    position: relative;
+}
+main > .speed  .content > div > h1{
+    font-size: 4rem;
+    letter-spacing: 1.5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main > .speed  .content > div > p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+main > .speed  .content > .left-box::before{
+    content: "km/h";
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: 600;
+    opacity: 0.2;
+}
+main > .speed  .content > .mid-box::before{
+    content: "kW";
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: 600;
+    opacity: 0.2;
+}
+main > .speed  .content > .right-box::before{
+    content: "Seconds";
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: 600;
+    opacity: 0.2;
+}
+main > .info{
+    background-color: #000000;
+    padding: 50px 0;
+    background-image: url("/imgs/smoke.webp");
+    background-position: center;
+    background-size: cover;
+
+}
+main > .info .top-section,
+main > .info .bottom-section{
+    display: flex;
+}
+main > .info  .left-box,
+main > .info  .right-box{
+    width: calc(100% / 2);
+    color: #ffffff;
+}
+main > .info  .left-box > .icon,
+main > .info  .right-box > .icon{
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+main > .info .top-section > .left-box > .icon{
+    background-image: url("/imgs/002-4x4.png");
+}
+main > .info .top-section > .right-box > .icon{
+    background-image: url("/imgs/003-alloy-wheel.png");
+}
+main > .info .bottom-section > .left-box > .icon{
+    background-image: url("/imgs/001-money-management.png");
+}
+main > .info .bottom-section > .right-box > .icon{
+    background-image: url("/imgs/001-electric-car.png");
+}
+main > .info  .left-box > h2,
+main > .info  .right-box > h2{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+main > .info  .left-box > p,
+main > .info  .right-box > p{
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding: 0 0 20px 0;
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 350px;
+    text-wrap: balance;
+}
+@media(max-width: 575.98px){
+    header .header-content > .left-section,
+    header .header-content > .right-section {
+        padding: 15px;
+    }
+    header .header-content > .left-section h1{
+        font-size: 1rem;
+    }
+    header .header-content > .left-section p {
+        font-size: 0.8rem;
+    }
+    main > .description .top-section > h1{
+        font-size: 1.9rem;
+    }
+    main > .description .bottom-section > .left-box > .icon{
+        font-size:3.8rem;
+    }
+    main > .description .bottom-section > .mid-box > .icon,
+    main > .description .bottom-section > .right-box > .icon {
+        min-width: 44px;
+    }
+    main > .description .bottom-section .description > h2{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    main > .description .bottom-section .description > p{
+        font-size: 0.8rem;
+    }
+    main > .car-design > .right-section > div:nth-child(3){
+        font-size: 0.6rem; 
+    }
+    
+    main > .speed .content > .left-box::before,
+    main > .speed .content > .mid-box::before,
+    main > .speed .content > .right-box::before{
+        font-size: 2rem;
+    }
+    main > .speed .content > div > p {
+        font-size: 1.2rem;
+    }
+    main > .description .top-section::before{
+        left: -7px;
+        width: 7px;
+    }
+    main > .speed .content > div > h1{
+        font-size: 2.8rem;
+    }
+    main > .info .left-box > .icon,
+     main > .info .right-box > .icon{
+        width: 70px;
+        height: 70px;
+    }
+    main > .info .left-box > h2, 
+    main > .info .right-box > h2{
+        font-size: 1rem;
+    }
+    main > .info .left-box > p, main > .info .right-box > p{
+        font-size: 0.8rem;
+    }
+}
+@media(min-width: 576px){
+    header .header-content > .left-section,
+    header .header-content > .right-section {
+        padding: 16px;
+    }
+    header .header-content > .left-section h1{
+        font-size: 1.4rem;
+    }
+    header .header-content > .left-section p {
+        font-size: 1rem;
+    }
+    main > .description .top-section > h1{
+        font-size: 1.9rem;
+    }
+    main > .description .bottom-section > .left-box > .icon{
+        font-size:3.8rem;
+    }
+    main > .description .bottom-section > .mid-box > .icon,
+    main > .description .bottom-section > .right-box > .icon {
+        min-width: 48px;
+    }
+    main > .description .bottom-section .description > h2{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    main > .description .bottom-section .description > p{
+        font-size: 0.8rem;
+    }
+    main > .car-design > .right-section > div:nth-child(3){
+        font-size: 0.8rem; 
+    }
+    
+    main > .speed .content > .left-box::before,
+    main > .speed .content > .mid-box::before,
+    main > .speed .content > .right-box::before{
+        font-size: 2.6rem;
+    }
+    main > .description .top-section::before{
+        left: -7px;
+        width: 7px;
+    }
+    main > .speed .content > div > h1{
+        font-size: 3rem;
+    }
+    main > .info .left-box > .icon,
+     main > .info .right-box > .icon{
+        width: 70px;
+        height: 70px;
+    }
+    main > .info .left-box > h2, 
+    main > .info .right-box > h2{
+        font-size: 1.2rem;
+    }
+    main > .info .left-box > p, main > .info .right-box > p{
+        font-size: 0.8rem;
+    }
+    main > .speed .content > div > p {
+        font-size: 1.5rem;
+    }
+}
+@media(min-width: 768px){
+    header .header-content > .left-section,
+    header .header-content > .right-section {
+        padding: 25px;
+    }
+    header .header-content > .left-section h1{
+        font-size: 1.9rem;
+    }
+    header .header-content > .left-section p {
+        font-size: 1rem;
+    }
+    main > .description .top-section > h1{
+        font-size: 2rem;
+    }
+    main > .description .bottom-section > .left-box > .icon{
+        font-size:4.6rem;
+    }
+    main > .description .bottom-section > .mid-box > .icon,
+    main > .description .bottom-section > .right-box > .icon {
+        min-width: 50px;
+    }
+    main > .description .bottom-section .description > h2{
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    main > .description .bottom-section .description > p{
+        font-size: 1rem;
+    }
+    main > .car-design > .right-section > div:nth-child(3){
+        font-size: 1.1rem; 
+    }
+    
+    main > .speed .content > .left-box::before,
+    main > .speed .content > .mid-box::before,
+    main > .speed .content > .right-box::before{
+        font-size: 3.6rem;
+    }
+    main > .description .top-section::before{
+        left: -8px;
+        width: 8px;
+    }
+    main > .speed .content > div > h1{
+        font-size: 3.5rem;
+    }
+    main > .info .left-box > .icon,
+     main > .info .right-box > .icon{
+        width: 80px;
+        height: 80px;
+    }
+    main > .info .left-box > h2, 
+    main > .info .right-box > h2{
+        font-size: 1.5rem;
+    }
+    main > .info .left-box > p, main > .info .right-box > p{
+        font-size: 1rem;
+    }
+}
+@media(min-width: 992px){
+    header .header-content > .left-section h1{
+        font-size: 2.7rem;
+    }
+    header .header-content > .left-section p {
+        font-size: 1rem;
+    }
+    main > .description .top-section > h1{
+        font-size: 2.1rem;
+    }
+    main > .description .bottom-section > .left-box > .icon{
+        font-size: 4.7rem;
+    }
+    main > .description .bottom-section > .mid-box > .icon,
+    main > .description .bottom-section > .right-box > .icon {
+        min-width: 50px;
+    }
+    main > .description .bottom-section .description > h2{
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    main > .car-design > .right-section > div:nth-child(3){
+        font-size: 1.25rem; 
+    }
+    main > .description .bottom-section .description > p{
+        font-size: 0.9rem;
+    }
+    main > .speed .content > .left-box::before,
+    main > .speed .content > .mid-box::before,
+    main > .speed .content > .right-box::before{
+        font-size: 4rem;
+    }
+    main > .speed .content > div > h1{
+        font-size: 4rem;
+    }
+    main > .description .top-section::before{
+        left: -8px;
+        width: 8px;
+    }
+    main > .info .left-box > .icon,
+     main > .info .right-box > .icon{
+        width: 100px;
+        height: 100px;
+    }
+    main > .info .left-box > h2, 
+    main > .info .right-box > h2{
+        font-size: 2rem;
+    }
+}
+@media(min-width: 1200px){
+    header .header-content > .left-section h1{
+        font-size: 3.4rem;
+    }
+    header .header-content > .left-section p {
+        font-size: 1.25rem;
+    }
+    main > .description .top-section > h1{
+        font-size: 2.25rem;
+    }
+    main > .description .bottom-section > .left-box > .icon{
+        font-size: 6rem;
+    }
+    main > .description .bottom-section > .mid-box > .icon,
+    main > .description .bottom-section > .right-box > .icon {
+        min-width: 70px;
+    }
+    main > .description .bottom-section .description > h2{
+        font-size: 2rem;
+        line-height: 2;
+    }
+    main > .description .bottom-section .description > p{
+        font-size: 1.1rem;
+    }
+    main > .speed .content > .left-box::before,
+    main > .speed .content > .mid-box::before,
+    main > .speed .content > .right-box::before{
+        font-size: 5rem;
+    }
+    main > .description .top-section::before{
+        left: -20px;
+        width: 10px;
+    }
+}
+
+
+

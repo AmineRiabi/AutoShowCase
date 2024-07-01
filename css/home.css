@@ -1,304 +1,709 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-body{
-    font-family: 'Roboto', sans-serif;
-}
-::-webkit-scrollbar {
-    width: 12px;
-}
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent,#ff3131);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(transparent,#943a3a);
 
-  }
-.container{
-    padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
-@media (min-width: 576px) { 
-    .container{
-        width: 562px;
-    }
- }
-/* Small */
-@media(min-width: 768px){
-    .container{
-        width: 750px;
-    }
-
-}
-/* Medium */
-@media(min-width: 992px){
-    .container{
-        width: 970px;
-    }
-
-}
-/* Large */
-@media (min-width: 1200px) {
-    .container{
-        width: 1170px;
-    }
-} 
-.main-bar{
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    top: 0;
-    left: 0;
-    padding: 10px 60px;
-    z-index: 50;
-}
-.main-bar > a > .logo{
-    width: 200px;
-    height: 40px;
-    background-image: url("/imgs/mini-logo.png");
+header{
+    height: 100vh;
+    background-image: url("/imgs/image-header.webp");
+    background-size: cover;
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
-.menu-icon{
-    width: 20px;
-    height: 16px;
-    cursor: pointer;
-    position: fixed;
-    z-index: 101;
+header .header-content{
+    display: flex;
+    height: 600px;
 }
-.menu-icon > span{
-    background-color: #ffffff;
-    height: 2px;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    transition: all 0.3s ease;
-}
-.menu-icon > span:first-child{
-    top: 0;
-}
-.menu-icon > span:nth-child(2){
-    top: 7px;
-    animation-name: go-back;
-    animation-duration: 0.3s;
-    opacity: 1;
-}
-.menu-icon > span:last-child{
-    top: 14px;
-}
-.menu-icon.active > span:nth-child(2){
-    animation-name: go;
-    animation-duration: 0.3s;
-    opacity: 0;
-}
-.menu-icon.active > span:first-child,
-.menu-icon.active > span:last-child{
-    top: 6px;
-}
-.menu-icon.active > span:first-child{
-    transform: rotate(45deg);
-}
-.menu-icon.active > span:last-child{
-    transform: rotate(-45deg);
-}
-@keyframes go{
-    0%{
-        left: -20px;
-        opacity: 0.9;
-    }
-    50%{
-        left: -30px;
-        opacity: 0.6;
-    }
-    100%{
-        left: -90px;
-        opacity: 0;
-    }
-}
-@keyframes go-back{
-    0%{
-        left: -90px;
-        opacity: 0;
-    }
-    100%{
-        left: -10px;
-        opacity: 0.9;
-    }
-}
-.modal {
-    display: none;
-    position: fixed; 
-    z-index: 100; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
-}
-  
-.modal > aside {
-    width: 280px;
-    display: block;
-    background-color: rgb(0, 0, 0);
+header .header-content > .left-section,
+header .header-content > .right-section{
+    width: 50%;
     height: 100%;
-    position: absolute;
-    left: -282px;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    padding: 25px;
 }
-.modal > aside > .logo{
-    width: 90%;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+header .header-content > .right-section{
+    display: flex;
+    justify-content: flex-end;
 }
-.modal > aside > .logo > img{
-    width: 100%;
-    height: 100%;
-}
-.modal > aside > ul{
-    list-style: none;
+
+header .header-content > .left-section {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
-}
-.modal > aside > ul > .nav-links{
-    padding: 10px 0;
-    color: #ffffff;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
+    justify-content: space-around;
 
 }
-.modal > aside > ul > .nav-links > a{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header .header-content > .left-section > .audi-logo{
+    width: 270px;
+    height: 78px;
+    margin-top: 50px;
 }
-.modal > aside > ul > .nav-links:nth-child(2) > a > .chevron{
-    width: 30px;
-    height: 30px;
-    background-color: #ff3131;
-    border: none;
-    cursor: pointer;
+header .header-content > .left-section > .audi-logo > img{
+    width: 100%;
+    height: 100%;
 }
-.modal > aside > ul > .nav-links:nth-child(2) > a > .chevron > span{
-    transform: rotate(135deg);
-    width: 12px;
-    height: 12px;
-    background-color: transparent;
-    border-top: 3px solid #ffffff;
-    border-right: 3px solid #ffffff;
-    display: inline-block;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-}
-.modal > aside > ul > .nav-links:nth-child(2) > a > .chevron.active > span{
-    transform: rotate(46deg);
-    -webkit-transform: rotate(46deg);
-    -moz-transform: rotate(46deg);
-    -ms-transform: rotate(46deg);
-    -o-transform: rotate(46deg);
-}
-.modal > aside > ul > .nav-links:nth-child(2) > .nav-links-cars{
-    list-style: none;
-    display: none;
-}
-.modal > aside > ul > .nav-links:nth-child(2) > .nav-links-cars > li{
+header .header-content > .left-section  h4{
     color: #ffffff;
-    padding-top: 20px 
-}
-.modal > aside > ul > .nav-links:nth-child(2) > .nav-links-cars > li:hover,
-.modal > aside > ul > .nav-links.active,
-.modal > aside > ul > .nav-links:hover{
-    color: #ff3131;
-}
-.modal > aside > ul > .nav-links > a,
-.modal > aside > ul > .nav-links:nth-child(2) > .nav-links-cars > li > a{
-    text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
     font-weight: 400;
-    color: inherit; 
+    margin-bottom: 20px;
 }
-footer{
-    background-color: #000000;
+header .header-content > .left-section  h1{
+    font-size: 4.50rem;
+    color: #ffffff;
 }
-footer .content-footer {
+main > .description{
+    height: 600px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    overflow: hidden;
 }
-footer .content-footer > .box-logo{
-    width: 300px;
-    height: 100px;
+main > .description > .left-section,
+main > .description > .right-section{
+    height: 100%;
+    width: 50%;
 }
-footer  .box-logo > img{
+main > .description > .left-section{
+    background-image: url("/imgs/audi-A8/desc-audi.webp");
+    background-position: top;
+    background-size: cover;
+}
+main > .description > .right-section{
+    background-image: linear-gradient(190deg, #ff3131,#d11362,#56144d);
+    padding: 100px;
+    color: #ffffff;
+}
+main > .description > .right-section > h4{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 20px 0;
+}
+main > .description > .right-section > h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+main > .description > .right-section > span{
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 500;
+}
+main > .description > .right-section > p{
+    line-height: 1.5;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+main > .video-audi-a8{
+    height: 400px;
+}
+main > .video-audi-a8 > video{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-footer  span{
-    display: inline-block;
+main > .available-models{
+    height: 400px;
+    background-image: linear-gradient(190deg, #ff3131,#d11362,#56144d);
+}
+main > .available-models .slide-show{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+main .available-models .slide-show > .control-panel{
+    position: relative;
+    height: 100%;
+    width: calc(100% * 3);
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+main > .available-models   .slide-audi-A6,
+main > .available-models   .slide-audi-R8,
+main > .available-models   .slide-audi-A8{
+    display: flex;
+    position: absolute;
+    width: calc(100% / 3);
+    height: 100%;
+}
+main > .available-models   .slide-audi-A6{
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+main > .available-models   .slide-audi-R8{
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+main > .available-models   .slide-audi-A8{
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+}
+main > .available-models  .left-section,
+main > .available-models  .mid-section,
+main > .available-models  .right-section{
+    padding: 50px 0;
+    height: 100%;
+}
+main > .available-models  .left-section{
+    width: 30%;
+}
+main > .available-models  .mid-section{
+    width: 40%;
+}
+main > .available-models  .right-section{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+main > .available-models  .left-section > h4{
     color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+main > .available-models  .left-section > h1{
+    color:#ffffff;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+main > .available-models .left-section > span{
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 500;
+    color: #ffffff;
+}
+main > .available-models .left-section > p{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 2;
+}
+main > .available-models .mid-section{
+    display: flex;
+    align-items: center;  
+}
+main > .available-models .mid-section > .image-container {
+    width: 100%;
+}
+main > .available-models .mid-section > .image-container > img{
+    width: 100%;
+}
+main > .available-models .right-section > p{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+main > .available-models .slide-audi-A6  a,
+main > .available-models .slide-audi-R8  a{
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #ffffff;
+    background-color: #000000;
+    display: inline-block;
     text-transform: capitalize;
     letter-spacing: 1.5px;
-    padding: 10px;
-    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
-footer  span > a{
-    text-decoration: none;
-    color: #ff3131;
+main > .Exterior-lighting{
+    min-height: 900px;
+    background-color: #000000;
 }
-.btn-up{
-    display: none;
-    position: fixed;
-    right: 20px;
-    bottom: 10px;
-    width: 45px;
-    height: 45px;
-    background-color:#3e4248;
-    color: #ff3131;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    font-size: 30px;
-    box-shadow: 0 0 6px #1a1919;
-}
-.btn-up.show{
-    display: block;
-}
-.loader{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+main > .Exterior-lighting .section-top{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 50px 0;
+}
+main > .Exterior-lighting .section-top > .left-box,
+main > .Exterior-lighting .section-top > .right-box{
+    width: 50%;
+}
+main > .Exterior-lighting .section-top > .left-box > h4{
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+main > .Exterior-lighting .section-top > .left-box > h2{
+    color: #ffffff;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+main > .Exterior-lighting .section-top > .left-box > p{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 2;
+    font-style: italic;
+}
+main > .Exterior-lighting .section-top > .right-box{
+    background-image: url("/imgs/audi-A8/audi-A8-blue.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+main > .Exterior-lighting .section-bottom{
+    display: flex;
+    column-gap: 20px;
+}
+main > .Exterior-lighting .section-bottom > article{
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;    
+}
+main > .Exterior-lighting .section-bottom > article > .top-section{
+    height: 261px;
+}
+main > .Exterior-lighting .section-bottom > article:first-child > .top-section{
+    background-image: url("/imgs/audi-A8/audi-A8-rim.webp");
+    background-size: cover;
+    background-position: left;
+}
+main > .Exterior-lighting .section-bottom > article:last-child > .top-section{
+    background-image: url("/imgs/audi-A8/LED-headlights.png");
+    background-size: cover;
+    background-position: left;
+}
+main > .Exterior-lighting .section-bottom > article:nth-child(2) > .top-section{
+    background-image: url("/imgs/audi-A8/LED-taillights.webp");
+    background-size: cover;
+    background-position: left;
+}
+main > .Exterior-lighting .section-bottom > article > .bottom-section{
+    padding: 10px;
+}
+main > .Exterior-lighting .section-bottom > article > .bottom-section > h2{
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+main > .Exterior-lighting .section-bottom > article > .bottom-section > p{
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.5;
+}
+main > .interior-design{
+    display: flex;
+    flex-direction: column;
+}
+main > .interior-design > .top-section{
+    /* height: 500px; */
+    display: flex;
+}
+main > .interior-design > .top-section > div{
+    width: calc(100% / 2);
+}
+main > .interior-design > .top-section > .left-section{
+    background-image: url("/imgs/audi-A8/audi-A8-interior-design.webp");
+    background-position: center;
+    background-size: cover;
+}
+main > .interior-design > .top-section > .right-section{
+    background-image: linear-gradient(190deg, #ff3131,#d11362,#56144d);
+    padding: 100px;
+    color: #ffffff;
+}
+main > .interior-design > .top-section > .right-section > h4{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 20px 0;
+}
+main > .interior-design > .top-section > .right-section > h2{
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+main > .interior-design > .top-section > .right-section > p{
+    font-style: italic;
+    line-height: 1.5;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    padding: 10px 0;
+}
+main > .interior-design > .bottom-section {
+    padding: 50px 0;
+    background-color: #000000;
+}
+main > .interior-design > .bottom-section .content{
+    display: flex;
+    column-gap: 20px;
+}
+main > .interior-design > .bottom-section .content > article{
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: column;
+}
+main > .interior-design > .bottom-section .content > article > .image-box{
+    height: 280px;
+}
+main > .interior-design > .bottom-section .content > article > .description-box{
+    padding: 20px;
+    color: #ffffff;
+}
+main > .interior-design > .bottom-section .content > article > .description-box > h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+}
+main > .interior-design > .bottom-section .content > article > .description-box > p{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+main > .interior-design > .bottom-section .content > article:first-child > .image-box{
+    background-image: url("/imgs/audi-A8/reading-lights.webp");
+    background-size: cover;
+    background-position: center;
+}
+main > .interior-design > .bottom-section .content > article:last-child > .image-box{
+    background-image: url("/imgs/audi-A8/relaxation.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+/*Extra small*/
+@media(max-width:575.98px){
+    .main-bar > a > .logo{
+        background-position: left;
+    }
+    header .header-content > .left-section{
+        justify-content: space-evenly;
+    }
+    header .header-content > .left-section > .audi-logo {
+        width: 140px;
+        height: auto;
+    }
+    header .header-content > .left-section h4 {
+        font-size: 0.60rem;
+    }
+    header .header-content > .left-section h1{
+        font-size: 1.4rem;
+    }
+    main > .description > .right-section {
+        padding: 10px;
+    }
+    main > .description > .right-section > h4{
+        font-size: 0.80rem;
+        font-weight: 500;
+    }
+    main > .description > .right-section > h1{
+        font-size: 1.6rem;
+        font-weight: 900;
+    }
+    main > .description > .right-section > p{
+        line-height: 1.1;
+    }
+    main > .available-models .left-section > h4 {
+        font-size: 0.6rem;
+    }
+    main > .available-models .left-section > h1{
+        font-size: 1.6rem;
+    }
+    main > .available-models .left-section > p{
+        line-height: 1.1;
+    }
+    main > .available-models .right-section > p{
+        font-size: 0.9rem;
+    }
+    main > .available-models .slide-audi-A6 a, 
+    main > .available-models .slide-audi-R8 a{
+        padding: 8px 10px;
+        letter-spacing: 1.2px;
+        font-weight: 400;
+        font-size: 0.5rem;
+        margin-top: 10px;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h4{
+        font-size: 0.7rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h2 {
+        font-size: 1.3rem;
+    }
+    main > .Exterior-lighting .section-bottom > article > .bottom-section > h2{
+        font-size: 0.7rem;
+    }
+    main > .interior-design > .top-section > .right-section{
+        padding: 10px;
+    }
+    main > .interior-design > .top-section > .right-section > h4 {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    main > .interior-design > .top-section > .right-section > h2 {
+        font-size: 1.5rem;
+    }
+    main > .interior-design > .bottom-section .content > article > .description-box > h1 {
+        font-size: 0.8rem;
+    }
+}
+/* Small */
+@media(min-width:576px){
+    .main-bar > a > .logo{
+        background-position: center;
+    }
+    header .header-content > .left-section{
+        justify-content: space-evenly;
+    }
+    header .header-content > .left-section > .audi-logo {
+        width: 190px;
+        height: auto;
+    }
+    header .header-content > .left-section h4 {
+        font-size: 0.75rem;
+    }
+    header .header-content > .left-section h1{
+        font-size: 2rem;
+    }
+    main > .description > .right-section {
+        padding: 20px;
+    }
+    main > .description > .right-section > h4{
+        font-size: 0.97rem;
+        font-weight: 500;
+    }
+    main > .description > .right-section > h1{
+        font-size: 1.4rem;
+        font-weight: 900;
+    }
+    main > .description > .right-section > p{
+        line-height: 1.5;
+    }
+    main > .available-models .left-section > h4 {
+        font-size: 0.8rem;
+    }
+    main > .available-models .left-section > h1{
+        font-size: 2.8rem;
+    }
+    main > .available-models .left-section > p{
+        line-height: 1.4;
+    }
+    main > .available-models .right-section > p{
+        font-size: 1.4rem;
+    }
+    main > .available-models .slide-audi-A6 a, 
+    main > .available-models .slide-audi-R8 a{
+        padding: 10px 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h4{
+        font-size: 1rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h2 {
+        font-size: 1.8rem;
+    }
+    main > .Exterior-lighting .section-bottom > article > .bottom-section > h2{
+        font-size: 1rem;
+    }
+    main > .interior-design > .top-section > .right-section{
+        padding: 10px;
+    }
+    main > .interior-design > .top-section > .right-section > h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    main > .interior-design > .top-section > .right-section > h2 {
+        font-size: 2rem;
+    }
+    main > .interior-design > .bottom-section .content > article > .description-box > h1 {
+        font-size: 1rem;
+    }
+}
+/* Medium */
+@media(min-width:768px){
+    header .header-content > .left-section > .audi-logo {
+        width: 220px;
+    }
+    header .header-content > .left-section {
+        justify-content: space-evenly;
+    }
+    header .header-content > .left-section h4{
+        font-size: 1.23rem;
+    }
+    header .header-content > .left-section h1 {
+        font-size: 2.9rem;
+    }
+    main > .description > .right-section {
+        padding: 50px;
+    }
+    main > .description > .right-section > h4 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    main > .description > .right-section > h1 {
+        font-size: 1.6rem;
+        font-weight: 900;
+    }
+    main > .available-models .left-section > h4 {
+        font-size: 1.2rem;
+    }
+    main > .available-models .left-section > h1{
+        font-size: 3.7rem;
+    }
+    main > .available-models .left-section > p{
+        line-height: 1.6;
+    }
+    main > .available-models .right-section > p{
+        font-size: 1.6rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h4{
+        font-size: 1.4rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h2 {
+        font-size: 2rem;
+    }
+    main > .Exterior-lighting .section-bottom > article > .bottom-section > h2{
+        font-size: 1.1rem;
+    }
+    main > .interior-design > .top-section > .right-section{
+        padding: 50px;
+    }
+    main > .interior-design > .top-section > .right-section > h4 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    main > .interior-design > .top-section > .right-section > h2 {
+        font-size: 2.1rem;
+    }
+    main > .interior-design > .bottom-section .content > article > .description-box > h1 {
+        font-size: 1.4rem;
+    }
+    main > .available-models .slide-audi-A6 a, 
+    main > .available-models .slide-audi-R8 a{
+        padding: 10px 25px;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+    }
+    
+}
+/* Large */
+@media(min-width:992px){
+    header .header-content > .left-section > .audi-logo {
+        width: 270px;
+        height: 78px;
+    }
+    header .header-content > .left-section {
+        justify-content: space-evenly;
+    }
+    header .header-content > .left-section h4{
+        font-size: 1.25rem;
+    }
+    header .header-content > .left-section h1 {
+        font-size: 3.9rem;
+    }
+    main > .description > .right-section > h4 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    main > .description > .right-section > h1 {
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+    main > .description > .right-section {
+        padding: 70px;
+    }
+    main > .interior-design > .top-section > .right-section > h4 {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    main > .interior-design > .top-section > .right-section {
+        padding: 70px;
+    }
+    main > .interior-design > .top-section > .right-section > h2 {
+        font-size: 2.8rem;
+    }
+    main > .available-models .left-section > h4 {
+        font-size: 1.5rem;
+    }
+    main > .available-models .left-section > h1{
+        font-size: 4rem;
+    }
+    main > .available-models .left-section > p{
+        line-height: 2;
+    }
+    main > .available-models .right-section > p{
+        font-size: 1.8rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h4{
+        font-size: 1.5rem;
+    }
+    main > .Exterior-lighting .section-top > .left-box > h2 {
+        font-size: 3rem;
+    }
+    main > .Exterior-lighting .section-bottom > article > .bottom-section > h2{
+        font-size: 1.5rem;
+    }
+    main > .interior-design > .bottom-section .content > article > .description-box > h1 {
+        font-size: 1.8rem;
+    }
+}
+/* Extra Large */
+@media(min-width:1200px){
+    header .header-content > .left-section {
+        justify-content: space-around;
+    }
+    header .header-content > .left-section h1 {
+        font-size: 4.50rem;
+    }
+    main > .description > .right-section > h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    main > .description > .right-section > h1 {
+        font-size: 3rem;
+    }
+    main > .description > .right-section {
+        padding: 100px;
+    }
+    main > .interior-design > .top-section > .right-section > h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    main > .interior-design > .top-section > .right-section {
+        padding: 100px;
+    }
+    main > .interior-design > .top-section > .right-section > h2 {
+        font-size: 3rem;
+    }
 }
