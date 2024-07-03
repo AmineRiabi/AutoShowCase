@@ -4,7 +4,10 @@ header{
     background-position: center;
 }
 header.audi-R8{
-    background-image: url("/imgs/audi-R8/audi-r8-header.webp");
+background-image: url("/imgs/audi-R8/audi-r8-header.webp");
+}
+header.audi-A6{
+    background-image: url("/imgs/audi-A6/audi-A6-header.webp");
 }
 header .header-content{
     display: flex;
@@ -527,6 +530,3 @@ main > .info  .right-box > p{
         width: 10px;
     }
 }
-
-
-
